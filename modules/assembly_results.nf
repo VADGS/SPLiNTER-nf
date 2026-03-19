@@ -1,6 +1,6 @@
 process assembly_results {
 
-  publishDir "${params.outdir}/report", mode: 'copy', pattern: "monroe_summary*.csv"
+  publishDir "${params.outdir}/report", mode: 'copy', pattern: "splinter_qc*.csv"
 
 
 
@@ -16,7 +16,7 @@ process assembly_results {
 
   output:
 
-  path("monroe_summary*.csv"),      emit: monroe_summary
+  path("splinter_qc*.csv"),      emit: splinter_summary
 
 
 
@@ -164,7 +164,7 @@ process assembly_results {
 
     #create output file
 
-    with open(f"monroe_summary_{today}.csv",'w') as csvout:
+    with open(f"splinter_qc_{today}.csv",'w') as csvout:
 
         writer = csv.writer(csvout,delimiter=',')
 
