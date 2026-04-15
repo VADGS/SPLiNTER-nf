@@ -15,7 +15,7 @@ process aggregate {
 
 	freyja aggregate tmp/ --output aggregated_results.tsv
 
-	awk 'BEGIN{ FS = OFS = "\\t" } { print \$0, (NR==1? "freyja_version" : "2.0.3-SARS-CoV-2-20260413") }' aggregated_results.tsv > temp && mv temp freyja_report.tsv 
+	awk 'BEGIN{ FS = OFS = "\\t" } { print \$0, (NR==1? "freyja_version" : "2.0.3-SARS-CoV-2-20260406") }' aggregated_results.tsv > temp && mv temp freyja_report.tsv 
 
 
 	"""
